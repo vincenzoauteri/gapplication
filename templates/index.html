@@ -1,0 +1,185 @@
+{% extends "public-base.html" %}
+{% block title %}{% endblock %}
+{% block bodyclass %}index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" media="screen" href="static/stylesheets/index.css">     
+{% endblock %}
+{% block content %}
+
+	<section id="content" class="container">
+    </section><!-- end .container -->
+
+    <div class="lead-container">
+        <div class="container">
+
+
+	        <!-- Macbook carousel -->
+	        <div id="carousel" class="carousel slide macbook" rel="carousel">
+		        <img src="static/images/carousel-macbook.png" class="carousel-macbook" alt="" />
+		        <!-- Carousel items -->
+		        <div class="carousel-inner">
+			        <!-- Item -->
+			        <div class="item active">      
+				        <img src="static/images/carousel/SL001.jpg" alt="" />
+                    </div>
+			        <!-- end Item -->
+			        <!-- Item -->
+			        <div class="item">
+				        <img src="static/images/carousel/SL002.jpg" alt="" />
+			        </div>
+			        <!-- end Item -->
+			        <!-- Item -->
+			        <div class="item">
+				        <img src="static/images/carousel/SL003.jpg" alt="" />
+			        </div>
+			        <!-- end Item -->
+			        <!-- Item -->
+			        <div class="item">
+				        <img src="static/images/carousel/SL004.jpg" alt="" />
+			        </div>
+			        <!-- end Item -->
+		        </div>
+		        <!-- Carousel navigation -->
+		        <a class="carousel-control left" href="#carousel" data-slide="prev"></a>
+		        <a class="carousel-control right" href="#carousel" data-slide="next"></a>
+	        </div>
+	        <!-- end Macbook carousel -->
+
+            <hr />
+
+            <div class="hero-unit">
+                <h1>We're still working hard to develop your Scopy!</h1>
+                <p>
+                    Leave your email address here, and you'd be one of the first people to try out Scopy.  
+                    Your feedback will be instrumental in building a Scopy you will love.  
+                    The first 1000 registered beta testers of Scopy who successfully complete participation 
+                    during the trial period will receive free access to premium Scopy add-on modules for two years!
+                </p>
+				<form method="post">
+                    <input type="text" name="email" placeholder="Enter your E-mail" /><br/>
+                    <button type="submit" class="button green">Submit</button>	
+				</form>
+				<hr />
+				<p><a href="https://www.facebook.com/pages/Scopy/497347913630367?fref=ts">Visit us on Facebook</a></p>
+                <div class="fb-like" data-href="https://www.facebook.com/pages/Scopy/497347913630367?fref=ts" data-send="true" data-width="450" data-show-faces="true"></div>
+            </div>
+
+        </div>
+    </div>
+        
+    <section class="container">
+
+        <div class="services">
+	        <ul class="nav nav-tabs">
+		        <li rel="service-1" class="active">
+			        <a href="#service-1" data-toggle="tab">
+				        <img src="/static/images/icons/laptop.png" alt="" />
+			        </a>
+		        </li>
+		        <li rel="service-2">
+			        <a href="#service-2" data-toggle="tab">
+				        <img src="/static/images/icons/upload.png" alt="" />	
+			        </a>
+		        </li>
+		        <li rel="service-3">
+			        <a href="#service-3" data-toggle="tab">
+				        <img src="/static/images/icons/graph.png" alt="" />	
+			        </a>
+		        </li>
+		        <li rel="service-4">
+			        <a href="#service-4" data-toggle="tab">
+				        <img src="/static/images/icons/suitcase.png" alt="" />	
+			        </a>
+		        </li>
+		        <li rel="service-5">
+			        <a href="#service-5" data-toggle="tab">
+				        <img src="/static/images/icons/globe.png" alt="" />	
+			        </a>
+		        </li>
+	        </ul>
+	        <div class="tab-content">
+		        <div id="service-1" class="tab-pane active">
+			        <h3>Manage your personal health record</h3>
+			        <p>
+					        Scopy lets you record your lifestyle data and health-related activities. You can store your 
+					        past medical histories in Scopy. You can also use Scopy to easily record and analyse your 
+					        exercise level, diets and other statistics that matter to you. 
+			        </p>
+			
+		        </div>
+		        <div id="service-2" class="tab-pane">
+			        <h3>Your Data, Under Your Control</h3>
+			        <p>
+			                Your data is yours, and we understand that. Scopy lets you store your data in your own computer (locally). 
+			                You can use cloud-storage providers such as DropBox, or you can also store your data in our secure
+			                server.
+			        </p>
+		        </div>
+		        <div id="service-3" class="tab-pane">
+				        <h3>Gain Insights on Your Health</h3>
+				        <p>
+				            Scopy's powerful analytical engine allows you to notice early warning signs and 
+				            long-term trends in your health before it is too late. We can also provide you with a 
+				            personalized recommendation on how to best maintain and improve your health, based on all
+				            the health data that you regularly record.
+				        </p>
+		        </div>
+		        <div id="service-4" class="tab-pane">
+			            <span class="price">
+				            starting at <b>$1</b>
+				
+			            </span>		        
+				        <h3>Powerful Add-ons Engine</h3>
+				        <p>
+				            Scopy also comes with an extensive set of add-ons, if you need more than just simple 
+				            personal health maintenance. If you are diabetic, Scopy has an add-on module to help 
+				            you monitor your blood sugar level. Your health is our priority, and we do our best to 
+				            help you maintain it.
+				        </p>
+		        </div>
+		        <div id="service-5" class="tab-pane">
+				        <h3>Share and Access Your Data Anywhere</h3>
+				        <p>
+				            Scopy's simple and clean report allows you to share your personal health stories
+				            with your doctor. Come prepared during a consultation, and help your doctor make an 
+				            informed decision on how to best manage your health.
+				        </p>
+		        </div>
+	        </div>
+        </div>
+        
+        <hr />
+
+	    <section class="row">
+		    <article class="span4">
+		        <img src="/static/images/C1.jpg" alt="" />
+			    <h2><span class="grey">Scopy</span> Manages</h2>
+			    <p>
+				    We take personal healthcare seriously. Scopy provides you with tools to manage your personal health data effectively. 
+			    </p>
+			    <!-- p><a class="" href="#">Read more &raquo;</a></p -->
+		    </article>
+		    <article class="span4">
+		        <img src="/static/images/C2.jpg" alt="" />
+			    <h2><span class="grey">Scopy</span> Analyzes</h2>
+			    <p>
+				    Data is useless without meaning. Scopy helps you analyzes your personal data to gain insights into how to best maintain your health.
+			    </p>
+			    <!-- p><a class="" href="#">Read more &raquo;</a></p -->
+		    </article>
+		    <article class="span4">
+		        <img src="/static/images/C3.jpg" alt="" />
+			    <h2><span class="grey">Scopy</span> Reports</h2>
+			    <p>Our reporting module produces a nice and pretty report for you to show your doctor. You can export your data out to
+			    use in other different softwares, as well.</p>
+			    <!-- p><a class="" href="#">Read more &raquo;</a></p -->
+		    </article>
+	    </section>
+	    <!-- end .row -->
+        
+        </section>
+    </section>
+	
+{% endblock %}
+
