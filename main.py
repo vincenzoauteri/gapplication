@@ -18,10 +18,8 @@
 import webapp2
 import re
 import string
-from users import User
 from handlers import *
 from security import *
-import mockup_handlers as Mockup
 
 from google.appengine.ext import db
 
@@ -29,7 +27,5 @@ from google.appengine.ext import db
 
 app = webapp2.WSGIApplication([
     ('/', FrontPageHandler),
-    ('/preview', PreviewHandler),
-    ('/thankyou', ThankYouHandler),
-    ('/about', AboutMeHandler)],
+    ('/gent', ImpressHandler)],
     debug=True)

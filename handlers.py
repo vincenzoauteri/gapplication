@@ -1,7 +1,5 @@
 import os 
 from google.appengine.ext import db
-from users import User
-from users import NewsletterSubscriber
 import webapp2
 import re
 import cgi
@@ -68,25 +66,17 @@ class Handler(webapp2.RequestHandler):
         self.user = uid and User.get_by_id(int(uid))
 
 
-class PreviewHandler(Handler):
-    """Class for handling preview page"""
 
-    def get(self):
-        """Function to show preview page"""
-        user_cookie = self.request.cookies.get("user_id", "")
-        if user_cookie and verify_cookie_hash(user_cookie):
-            self.render("preview.html")
-        else :
-            self.redirect("/login")
 
-class AboutMe(Handler):
-    """Rendering for the page on about me"""
+class ImpressHandler(Handler):
+    """Js impress handler"""
 
     def render_front(self, entries={}):
-        self.render('about.html')
+        self.render('genterprise.html')
 
     def get(self):
         self.render_front()
+
 
 class FrontPageHandler(Handler):
     """Class used to render the main page of the site"""
@@ -99,25 +89,4 @@ class FrontPageHandler(Handler):
         """Function called when the front page is requested"""
         self.render_front()
 
-    def post(self):
-        entered_email= cgi.escape(self.request.get("email"))
-        logging.error("Entered email %s" % entered_email)
-        #Check for valid address
-        error=""
 
-        if not entered_email or not verify_email(entered_email):
-            error = "Please enter a valid e-mail"
-        else:
-           send_email('thankyou.txt',entered_email)
-           self.redirect('/thankyou')
-
-class ThankyouHandler(Handler):
-    """Class used to render the thankyou page after subscribing to the newsletter"""
-
-    def render_front(self, entries={}):
-        """utility function used to render the html"""
-        self.render('thankyou.html')
-
-    def get(self):
-        """Function called when thankyou page is requested"""
-        self.render_front()
