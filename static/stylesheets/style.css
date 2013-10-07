@@ -29,19 +29,19 @@ body {
 }
 
 body {
-	background: url(../images/background.png) 0 90px repeat-x #fff;
+	//background: url(../images/background.png) 0 90px repeat-x #fff;
 }
 body.index {
-	background: url(../images/SP-Home.jpg) 0 90px repeat-x #fff;
+	//background: url(../images/SP-Home.jpg) 0 90px repeat-x #fff;
 }
 @media (max-width: 979px) and (min-width: 768px) {
 	body {
-		background: url(../images/background.png) 0 120px repeat-x #fff;
+	 // background: url(../images/background.png) 0 120px repeat-x #fff;
 	}
 }
 @media (max-width: 767px) {
 	body {
-		background: url(../images/background.png) 0 130px repeat-x #fff;
+		//background: url(../images/background.png) 0 130px repeat-x #fff;
 	}
 }
 
@@ -256,7 +256,7 @@ footer p {
 	/* --------------------------------------------------------	*/
 
 	#copyright {
-		background:url(../images/copyright-background.png) repeat-x #080707;
+		//background:url(../images/copyright-background.png) repeat-x #080707;
 		margin:0;
 		padding:14px 0 12px 0;
 		font-size:0.9em;
@@ -967,7 +967,7 @@ input:focus, textarea:focus {
 
 	.lead-container {
 		overflow:hidden;
-		background:url(../images/carousel-macbook-background.png) 0 410px repeat-x;
+		//background:url(../images/carousel-macbook-background.png) 0 410px repeat-x;
 	}
 	.carousel.macbook {
 		position:relative;
@@ -1027,7 +1027,7 @@ input:focus, textarea:focus {
 
 	@media (max-width: 979px) and (min-width: 768px) {
 		.lead-container {
-			background:url(../images/carousel-macbook-background.png) 0 360px repeat-x;
+			//background:url(../images/carousel-macbook-background.png) 0 360px repeat-x;
 		}
 		.carousel.macbook .carousel-macbook {
 			width:620px;	
