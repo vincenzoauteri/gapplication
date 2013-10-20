@@ -28,5 +28,6 @@ from google.appengine.ext import db
 app = webapp2.WSGIApplication([
     ('/', FrontPageHandler),
     ('/maps', MapsHandler),
-    ('/gent', ImpressHandler)],
+    ('/gent-en', GentEnHandler),
+    ('/gent-es', GentEsHandler)],
     debug=True)

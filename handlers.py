@@ -72,7 +72,7 @@ class GentEnHandler(Handler):
     """Js impress handler"""
 
     def render_front(self, entries={}):
-        self.render('gent-en.html')
+        self.render('gent-english.html')
 
     def get(self):
         self.render_front()
@@ -81,7 +81,7 @@ class GentEsHandler(Handler):
     """Js impress handler"""
 
     def render_front(self, entries={}):
-        self.render('gent-es.html')
+        self.render('gent-spanish.html')
 
     def get(self):
         self.render_front()

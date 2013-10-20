@@ -101,11 +101,11 @@ function drawMarkers() {
 
     for (var i=0;i<paths.length;i++) {
 
-      if (indexes[i] == paths[i].length) {
+      if (indexes[i] >= paths[i].length) {
         paths[i].reverse();
         indexes[i] =0;
       } else {
-        indexes[i]++;
+        indexes[i]+=3;
       }
       latlon = (paths[i][indexes[i]]);
       var title = 'truck',i;
@@ -115,6 +115,14 @@ map: map,
 icon: image,
 title: title
 });
+
+var markClick = function () { 
+  console.log("clicked");
+};
+
+
+google.maps.event.addListener(tempMark,'click',markClick);
+
 markers.push(tempMark);
 }
 
@@ -122,7 +130,7 @@ markers.push(tempMark);
 
 function startDraw() {
   if (paths.length == 8) {
-    setInterval(drawMarkers,10);
+    setInterval(drawMarkers,500);
     for (var i=0;i<paths.length;i++) {
       indexes.push(Math.round(Math.random()*paths[i].length));
     }
