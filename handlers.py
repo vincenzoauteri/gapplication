@@ -68,11 +68,20 @@ class Handler(webapp2.RequestHandler):
 
 
 
-class ImpressHandler(Handler):
+class GentEnHandler(Handler):
     """Js impress handler"""
 
     def render_front(self, entries={}):
-        self.render('genterprise.html')
+        self.render('gent-en.html')
+
+    def get(self):
+        self.render_front()
+
+class GentEsHandler(Handler):
+    """Js impress handler"""
+
+    def render_front(self, entries={}):
+        self.render('gent-es.html')
 
     def get(self):
         self.render_front()
