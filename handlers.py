@@ -86,6 +86,26 @@ class GentEsHandler(Handler):
     def get(self):
         self.render_front()
 
+class MapssHandler(Handler):
+    """Maps handler"""
+
+    def render_front(self, entries={}):
+        self.render('maps.html',entries={"api-key":"10","sensor":"TRUE"})
+    # entries={"api-key":"10","sensor":"TRUE"}
+
+    def get(self):
+        self.render_front()
+
+class MapsHandler(webapp2.RequestHandler):
+  def get(self):
+    template_values =  {
+        "apikey":"AIzaSyDGtBNgslf1vo9524bkFwArnIqaTffNX-Y",
+        "sensor":"true"
+        }
+
+    template = jinja_env.get_template('maps.html')
+    self.response.out.write(template.render(template_values))
+
 
 class FrontPageHandler(Handler):
     """Class used to render the main page of the site"""
